@@ -1,19 +1,27 @@
-apiVersion: v1
-appVersion: 0.30.0
-description: An nginx Ingress controller that uses ConfigMap to store the nginx configuration.
-engine: gotpl
+annotations:
+  artifacthub.io/changes: |-
+    - "Add controller.metrics.serviceMonitor.annotations in Helm chart"
+    - "fix(labels): use complete labels variable on default-backend deployment"
+    - "chart: allow setting allocateLoadBalancerNodePorts (#10693)"
+    - "[release-1.9] feat(helm): add documentation about metric args (#10695)"
+    - "Update Ingress-Nginx version controller-v1.9.5"
+  artifacthub.io/prerelease: "false"
+apiVersion: v2
+appVersion: 1.9.5
+description: Ingress controller for Kubernetes using NGINX as a reverse proxy and
+  load balancer
 home: https://github.com/kubernetes/ingress-nginx
-icon: https://imgcache.qq.com/qcloud/tcloud_dtc/static/Industry_tke/61a46829-4e90-449b-9a0f-90b188e78028.png
+icon: https://cloudcache.tencent-cloud.com/qcloud/ui/static/Industry_tke/61a46829-4e90-449b-9a0f-90b188e78028.png
 keywords:
 - ingress
 - nginx
-kubeVersion: '>=1.10.0-0'
+kubeVersion: '>=1.20.0-0'
 maintainers:
-- name: ChiefAlexander
-- email: Trevor.G.Wood@gmail.com
-  name: taharah
+- name: rikatz
+- name: strongjz
+- name: tao12345666333
+- name: halewang@tencent.com
 name: nginx-ingress
 sources:
 - https://github.com/kubernetes/ingress-nginx
-version: 1.36.3
-kubeVersion: < 1.22.0-x
+version: 4.9.0
